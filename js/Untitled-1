@@ -1,0 +1,9 @@
+SELECT
+  p.person_id AS person_id,
+  p.person_name AS person_name, 
+  o.occ_name AS occ_name, 
+  g.gift_idea  AS gift_idea , 
+FROM 
+ gifts g
+ INNER JOIN people p ON g.person_id = p.person_id
+ INNER JOIN occasions o ON g.occ_id = o.occ_id
